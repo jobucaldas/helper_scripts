@@ -16,7 +16,7 @@ do
 
     case $answer in
         [yY]* ) read -p "What is the folder name? " custom 
-            ln -s $drive/$custom $custom
+            ln -s $drive/$custom $HOME/$custom
             break;;
 
         [nN]* ) break;;
@@ -27,11 +27,12 @@ done
 
 while true
 do
-    read -p "Do you want to add a git folder to your home? [y/n] " answer
+    read -p "Do you want to add a git projects folder to your home? [y/n] " answer
 
     case $answer in
         [yY]* ) read -p "What is the mount point for your git folder? " gitFolder
-            ln -s $gitFolder $HOME/git
+	    read -p "What do you want it to be named? " gitName
+            ln -s $gitFolder $HOME/gitName
             break;;
 
         [nN]* ) exit;;
