@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "Welcome to the custom linking script!"
 
