@@ -17,7 +17,7 @@ do
     case $answer in
         [yY]* ) read -p "What is the folder name? " custom 
             ln -s $drive/$custom $HOME/$custom
-            break;;
+            echo "Done.";;
 
         [nN]* ) break;;
 
